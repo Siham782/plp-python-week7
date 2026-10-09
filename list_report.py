@@ -1,20 +1,22 @@
 items = ["bread", "avocado", "milk", "sweet potatoes", "tea"]
 
-print("Shopping List:")
-for index in range(len(items)):
-    print(f"{index + 1}. {items[index]}")
+print("Shopping List Report:")
+
+number = 1
+for item in items:
+    print(str(number) + ". " + item)
+    number = number + 1
 
 count = 0
-
 for item in items:
     if len(item) > 4:
-        count += 1
+        count = count + 1
+
+print("Items with more than 4 letters:", count)
 
 longest = items[0]
-
 for item in items:
     if len(item) > len(longest):
         longest = item
 
-print("Items with more than 4 letters:", count)
-print("Longest item:", longest)
+print("Longest item name:", longest)
