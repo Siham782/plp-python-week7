@@ -1,45 +1,25 @@
 
-# Part B: Shopping List Manager
+# Part A: List Warmup
 
-shopping_list = []
+# 1. Create a list of four fruits
 
-while True:
-print("\n--- Shopping List Menu ---")
-print("add / remove / show / done")
+fruits = ["apple", "banana", "mango", "orange"]
 
-```
-action = input("What would you like to do? ").strip().lower()
+# 2. Print the first and last fruits using indexes
 
-if action == "add":
-    item = input("Enter an item to add: ").strip()
+print("First fruit:", fruits[0])
+print("Last fruit:", fruits[-1])
 
-    if item:
-        shopping_list.append(item)
-        print(f"{item} added to your list.")
-    else:
-        print("Please enter a valid item.")
+# 3. Add a fifth fruit using append()
 
-elif action == "remove":
-    item = input("Enter an item to remove: ").strip()
+fruits.append("pineapple")
+print("After adding a fruit:", fruits)
 
-    if item in shopping_list:
-        shopping_list.remove(item)
-        print(f"{item} removed from your list.")
-    else:
-        print("That item is not on your list.")
+# 4. Remove one fruit using remove()
 
-elif action == "show":
-    if shopping_list:
-        print("\nYour shopping list:")
-        for item in shopping_list:
-            print(item)
-    else:
-        print("Your shopping list is empty.")
+fruits.remove("banana")
+print("After removing a fruit:", fruits)
 
-elif action == "done":
-    print("Goodbye! Happy shopping!")
-    break
+# 5. Print the number of fruits remaining using len()
 
-else:
-    print("Invalid choice. Type add, remove, show, or done.")
-```
+print("Number of fruits remaining:", len(fruits))
